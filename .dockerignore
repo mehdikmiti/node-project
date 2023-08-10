@@ -1,0 +1,3 @@
+# Here we specify the files and the folder we don't wnt to copy it when building the image 
+/node_modules
+Dockerfile
