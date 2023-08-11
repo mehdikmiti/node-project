@@ -1,0 +1,15 @@
+# first we start with docker compose version
+version: '3'
+
+# now we'll define the services which are the containers that we'll gonna use, in our case we have just one
+services:
+# name that we'll give to our app, in our case "node-app"
+  node-app:
+  # the whole idea is to replace the command in the image 3 (docker run ...) with an easy way
+    container_name: express-node-app-container
+    # we can replace the . with Dockerfile but docker is smart enough to find it even with .
+    build: .
+    # volumes:
+    #   - ./src:/app/src:ro
+    ports:
+      - "8000:4000"
